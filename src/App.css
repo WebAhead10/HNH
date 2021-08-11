@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
-
+.mario {
+  display: flex;
+  flex-direction: column;
+  background-color: #c9d2eb;
+  height: calc(100vh - 60px);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

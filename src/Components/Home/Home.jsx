@@ -1,12 +1,12 @@
-import React from 'react';
-import './style.css';
-
+import React from "react";
+import "./style.css";
+import Search from "../Search/Search";
 function Home() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div className="home">
+      <Search />
+    </div>
+  );
 }
 
-export default Home
+export default Home;

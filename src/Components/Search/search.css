@@ -1,0 +1,12 @@
+.search__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.btn {
+  border-radius: 8px;
+  margin-top: 20px;
+  border-color: transparent;
+}

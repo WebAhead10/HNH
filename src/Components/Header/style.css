@@ -1,3 +1,14 @@
-* {
-    background-color: #fff;
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  background-color: #808ae4;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  margin-right: 20px;
 }
