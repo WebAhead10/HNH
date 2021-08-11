@@ -1,12 +1,16 @@
 import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./style.css";
-function Header() {
+import SideNavBar from "../SideNavBar/SideNavBar";
+function Header(props) {
   return (
+  <div>
+    {props.sideNavBarOpen && <SideNavBar />}
     <header className="header">
-      <MenuIcon style={{ marginLeft: "20px" }} />
+      <button className="menuBtn" onClick={() => props.setSideNavBarOpen(!props.sideNavBarOpen)}> <MenuIcon style={{ marginLeft: "20px" }} /></button>
       <p>Home</p>
     </header>
+  </div>
   );
 }
 

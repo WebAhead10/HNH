@@ -1,0 +1,12 @@
+.mainDivUserInfo
+{
+    display:flex;
+    justify-content:space-between;
+    flex-direction: column;
+	background-color:#4d56a3d3;
+	border-radius:0px 0px 5px 5px;
+    border:1px solid #000000;
+    font-family: 'Work Sans', sans-serif;
+    height:20%;
+    width: 90%;
+}
