@@ -11,7 +11,7 @@ function Header(props) {
           className="menuBtn"
           onClick={() => props.setSideNavBarOpen(!props.sideNavBarOpen)}
         >
-          {" "}
+          {/* {" "} */}
           <MenuIcon style={{ marginLeft: "20px", zIndex: "11" }} />
         </button>
         <p>Home</p>
