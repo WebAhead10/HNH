@@ -1,9 +1,6 @@
 .left {
   width: 40%;
   height: 100vh;
-  /* left: 0; */
-  /* float: left;
-  position: relative; */
   z-index: 10;
   background-color: #4d56a3d3;
   overflow-x: hidden;
@@ -16,9 +13,6 @@
   justify-content: flex-start;
   flex-direction: column;
   list-style: none;
-  /* background-color: #4d56a3d3; */
-  /* box-shadow: 4px 5px 10px 1px #161616; */
-  /* border-top: 4px solid #505050b6; */
   font-family: "Work Sans", sans-serif;
   margin-top: 220px;
 }
@@ -46,3 +40,6 @@
 .nav li button:hover {
   background-color: transparent;
 }
+
+
+
