@@ -38,7 +38,9 @@ export default function SimpleBottomNavigation() {
   return (
     <div className="footer">
       <BottomNavigation
-        style={{ backgroundColor: "rgba(196, 196, 196, 0.4)" }}
+        style={{
+          backgroundColor: "rgba(196, 196, 196, 0.4)",
+        }}
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);

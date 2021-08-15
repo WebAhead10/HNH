@@ -1,9 +1,10 @@
 import "./App.css";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import Category from "./Components/Category/Category";
 
 function App() {
   // Declare a new state variable, which we'll call "count"
@@ -17,11 +18,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {isAuth && <Header setSideNavBarOpen={setSideNavBarOpen} sideNavBarOpen={sideNavBarOpen}/>}
+        {isAuth && (
+          <Header
+            setSideNavBarOpen={setSideNavBarOpen}
+            sideNavBarOpen={sideNavBarOpen}
+          />
+        )}
         <div className="mario">
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route exact path="/category">
+              <Category />
             </Route>
           </Switch>
         </div>

@@ -24,6 +24,7 @@ p {
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 100;
 }
 
 .nav-menu.active {
@@ -69,6 +70,6 @@ p {
   align-items: center;
 }
 
-span {
+.sidenavbar_span {
   margin-left: 16px;
 }
