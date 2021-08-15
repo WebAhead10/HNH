@@ -1,5 +1,7 @@
 import React from "react";
 import "./Worker.css";
+import "../WorkerData/Workerdata";
+import { Link } from "react-router-dom";
 function Worker() {
   return (
     <div className="worker">
@@ -18,6 +20,9 @@ function Worker() {
         <div className="worker_desc">
           Mario is a senior fullstack web developer that have alot of experience
           with frontend & backend development.
+          <Link to="/workerdata">
+            <button className="InfoButton">Info</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -36,9 +36,12 @@ p {
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 8px 0px 8px 16px;
   list-style: none;
   height: 60px;
+  border-radius: 25px 0px 0px 25px;
+  background-color: #6d7ae2;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .nav-text a {
@@ -58,16 +61,20 @@ p {
 }
 
 .nav-menu-items {
+  margin-top:25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
   width: 100%;
+  padding: 0;
 }
 
 .navbar-toggle {
-  background-color: #4d56a3d3;
   width: 100%;
-  height: 80px;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .sidenavbar_span {

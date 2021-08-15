@@ -18,7 +18,7 @@ img {
 .worker_info {
   display: flex;
   flex-direction: column;
-  margin-left:10px;
+  margin-left: 10px;
 }
 .worker_name {
   display: flex;
@@ -43,4 +43,16 @@ img {
   margin-top: 10px;
   font-size: 12px;
   text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.InfoButton {
+  background-color: #e9e3e3;
+  color: #765d06;
+  border-radius: 25px 0 0 0;
+  border: 0px solid black;
+  width: 20vw;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
