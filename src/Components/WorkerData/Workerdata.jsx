@@ -1,9 +1,11 @@
 import React from "react";
 import "./Workerdata.css";
+import Schedule from "../Schedule/Schedule";
+import Rating from "../Rating/Rating";
 
 function Workerdata({ worker }) {
   return (
-    <div className="workerdataa">
+    <div className="workerdataa" >
       {/* add profile pic */}
       <img className="WorkerImage" src={worker.image} alt="" />
       {/* main data worker *********** */}
@@ -13,11 +15,14 @@ function Workerdata({ worker }) {
         {/* ocupation */}
         <h4>{worker.ocupation}</h4>
         {/* stars */}
-        {/* <Stars >  TODO */}
+        <Rating fullStars={worker.stars}/>
         {/* desc */}
         <p className="WorkerDecs">{worker.decsription}</p>
         {/* order button */}
         <button>Order</button>
+      </div>
+      <div className="calender">
+      <Schedule />
       </div>
     </div>
   );

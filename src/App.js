@@ -32,7 +32,7 @@ function App() {
             sideNavBarOpen={sideNavBarOpen}
           />
         )}
-        <div className="mario">
+        <div className="mainPage">
           <Switch>
             <Route exact path="/">
               <Home />

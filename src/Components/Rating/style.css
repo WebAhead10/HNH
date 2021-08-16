@@ -1,0 +1,13 @@
+.Stars{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.fullStar{
+    color:gold;
+  }
+
+  .emptyStar{
+    color: rgba(253, 252, 252, 0.849);
+  }

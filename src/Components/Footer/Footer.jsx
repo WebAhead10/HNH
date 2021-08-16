@@ -11,10 +11,11 @@ import "./style.css";
 const useStyles = makeStyles({
   root: {
     width: "100%",
+    height: "10vh",
     position: "fixed",
     bottom: 0,
     backgroundColor: "#2d313a",
-    zIndex: 100,
+    zIndex:100,
   },
 });
 
