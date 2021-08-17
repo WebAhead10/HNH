@@ -4,6 +4,8 @@
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+  /* justify-content: around;
+  align-items: center; */
 }
 .btn {
   border-radius: 8px;

@@ -14,7 +14,7 @@ function Worker() {
       <div className="worker_info">
         <div className="worker_name">
           <span className="name">Mario Saliba</span>
-          <span className="rate">🌟🌟🌟🌟🌟</span>
+          <span className="rate">⭐⭐⭐⭐⭐</span>
         </div>
         <span className="worker_job">FullStack web developer</span>
         <div className="worker_desc">

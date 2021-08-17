@@ -1,7 +1,7 @@
 .service_container {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .service_name {
