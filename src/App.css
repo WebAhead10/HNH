@@ -2,12 +2,14 @@
 * {
   margin: 0;
   font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  overflow:hidden;
 }
 
 .App {
   text-align: center;
 }
-.mario {
+.mainPage {
   display: flex;
   flex-direction: column;
   background-color: #c9d2eb;

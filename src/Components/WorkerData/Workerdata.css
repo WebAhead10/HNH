@@ -1,3 +1,7 @@
+.workerdataa {
+  overflow:auto;
+  height:80vh;
+}
 .workerdata {
   background-color: #808ae4;
   margin: 0% 2% 0 2%;
@@ -19,6 +23,7 @@
 .WorkerDecs {
   font-size: small;
   color: black;
+  font-size: medium;
   /* text-align: justify;   */
   /* padding: 2%; */
 }
@@ -28,4 +33,9 @@ button {
   border-radius: 25px;
   width: 100px;
   border: transparent;
+}
+
+.calender {
+margin: 5%;
+height:40%
 }
