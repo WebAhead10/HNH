@@ -5,13 +5,13 @@ function Login() {
     return (
         <div className="container">
             <div className="userPic"></div>
-            <form className="form">
+            <form action="/" method="GET" className="form">
                 <select>
                     <option value="client">CLIENT</option>
                     <option value="worker">WORKER</option>
                     </select><br />
-                <input type="e-mail" placeholder="EMAIL"/><br />
-                <input type="password" placeholder="PASSWORD" /><br />
+                <input name="e-mail" type="e-mail" placeholder="EMAIL"/><br />
+                <input name="password" type="password" placeholder="PASSWORD" /><br />
                 <input type="submit" value="Login" />
                 </form>
                     <a href="/signup">
