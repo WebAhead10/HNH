@@ -1,38 +1,3 @@
-// import React from "react";
-// import "./style.css";
-// import UserInfo from "../UserInfo/UserInfo";
-// const SideNavBar = ({ sideNavBarOpen }) => {
-//   return (
-//     <div className="left" style={{ left: sideNavBarOpen ? "0px" : "-200px" }}>
-//       {/* User Info*/}
-
-//       <UserInfo sideNavBarOpen={sideNavBarOpen} />
-//       {/* main options*/}
-
-//       <div className="nav">
-//         <li>
-//           <button>Home</button>
-//         </li>
-//         <li>
-//           <button>Tweets</button>
-//         </li>
-//         <li>
-//           <button>Connections</button>
-//         </li>
-//         <li>
-//           <button>About</button>
-//         </li>
-//       </div>
-
-//       {/* secondary options  */}
-
-//       {/* log out / setting button (unsure) */}
-//     </div>
-//   );
-// };
-
-// export default SideNavBar;
-
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -53,7 +18,7 @@ function SideNavBar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-        <p>Home</p>
+          <p>{window.location.href.split("http://localhost:3000/")}</p>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
@@ -67,15 +32,13 @@ function SideNavBar() {
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
-                    <span>{item.title}</span>
+                    <span className="sidenavbar_span">{item.title}</span>
                   </Link>
                 </li>
               );
             })}
           </ul>
-          
         </nav>
-        
       </IconContext.Provider>
     </>
   );

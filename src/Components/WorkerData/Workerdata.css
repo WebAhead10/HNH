@@ -1,0 +1,31 @@
+.workerdata {
+  background-color: #808ae4;
+  margin: 0% 2% 0 2%;
+  border-radius: 8px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+  height: calc(50vh - 160px);
+}
+
+.WorkerImage {
+  width: 80%;
+  object-fit: contain;
+  align-self: center;
+}
+.WorkerDecs {
+  font-size: small;
+  color: black;
+  /* text-align: justify;   */
+  /* padding: 2%; */
+}
+button {
+  width: fit-content;
+  align-self: center;
+  border-radius: 25px;
+  width: 100px;
+  border: transparent;
+}
