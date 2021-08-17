@@ -39,7 +39,7 @@ form {
 }
 
 
-input[type="submit"]
+input[type="button"]
 {
     align-self: center;
     background-image: linear-gradient(to right, #1074ff 0%, #ee00ff  51%, #ff6e7f  100%);
@@ -50,7 +50,7 @@ input[type="submit"]
     border-radius: 25px;
     border: none;
     display: block;
-    padding:3px 70px;
+    padding:3px 40px;
     font-size: 17px;
     font-weight: 900;
 }

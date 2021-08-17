@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-      {isAuth && <Header setSideNavBarOpen={setSideNavBarOpen} sideNavBarOpen={sideNavBarOpen}/>}
+     <Header setSideNavBarOpen={setSideNavBarOpen} sideNavBarOpen={sideNavBarOpen}/>
         <div className="mario">
           <Switch>
             <Route exact path="/">
