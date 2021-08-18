@@ -64,7 +64,10 @@ const Signup = () => {
   const onChange =
     (stateKey) =>
     ({ target }) =>
-      setUserData({ ...userData, [stateKey]: target.value })
+
+      setUserData({ ...userData, [stateKey]: target.value,
+      
+      })
 
   const onSubmit = () => {
     // setLoading(true)
@@ -83,20 +86,21 @@ const Signup = () => {
 
       })
       .catch((err) => {
-        setError(err.message)
+      
+        setError(err.response.data.message)
       })
   }
 
   if (loading) {
     return (
-      <div class="container">
+      <div className="container">
         <h1>Loading...</h1>
       </div>
     )
   }
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>Signup</h1>
 
       <label htmlFor="">
@@ -110,12 +114,13 @@ const Signup = () => {
         />
       </label>
 
-      <label htmlFor="">
+      <label htmlFor="email">
         <b>Email</b><br />
         <input
         placeholder="  Insert your E-mail"
         className="username"
-          type="text"
+          type="email"
+          name="email"
           onChange={onChange("email")}
           value={userData.email}
         />
@@ -144,7 +149,7 @@ const Signup = () => {
         />
       </label>
       <input type="button" value="Signup" onClick={onSubmit} />
-      {error && <span class="error">{error}</span>}
+      {error && <span className="error">{error}</span>}
     </div>
   )
 }
