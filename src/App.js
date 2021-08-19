@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="mario">
+       <div className="mario" />
         {isAuth && (
           <Header
             setSideNavBarOpen={setSideNavBarOpen}
@@ -58,6 +58,7 @@ function App() {
         </div>
         {isAuth && <Footer />}
       </div>
+      
     </Router>
   );
 }
