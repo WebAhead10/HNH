@@ -29,6 +29,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <div className="mario">
         {isAuth && (
           <Header
             setSideNavBarOpen={setSideNavBarOpen}
@@ -36,6 +37,7 @@ function App() {
           />
         )}
         <div className="mainPage">
+
           <Switch>
             <Route exact path="/">
               <Home />
