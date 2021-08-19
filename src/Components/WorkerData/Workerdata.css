@@ -1,14 +1,12 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .workerdataa {
   height: 80vh;
   overflow: auto;
-
+  /* display: flex;
+  flex-direction: column;
+   justify-content: center;
+  align-items: center; */
 }
 
 .workerdata {
@@ -25,7 +23,7 @@
 }
 
 .WorkerImage {
-  width: 80%;
+  width: 50%;
   object-fit: contain;
   align-self: center;
 }
@@ -37,15 +35,18 @@
   /* text-align: justify;   */
   /* padding: 2%; */
 }
-
-button {
-  width: fit-content;
+.OrderButton {
+  /* width: fit-content; */
   align-self: center;
   border-radius: 25px;
   width: 100px;
-  border: transparent;
+  border: none;
+  margin-bottom: 5vh;
+  
 }
-.calender{
-  display:flex;
-  ak
+
+.calender {
+  margin: 5% 0;
+  display: flex;
+  justify-content: center;
 }
