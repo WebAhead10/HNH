@@ -30,8 +30,6 @@ function App() {
     <Router>
       <div className="App">
         <div className="mario">
-        
-        
           <Header
             setSideNavBarOpen={setSideNavBarOpen}
             sideNavBarOpen={sideNavBarOpen}
@@ -61,7 +59,9 @@ function App() {
       {isAuth && <Footer />}
       </div>
     </Router>
-  );
-}
+    
+    );
+    }
+  
 
 export default App;
