@@ -80,7 +80,7 @@ const Login = () => {
         <form  action="/" method="GET" className="form">
 
       <label htmlFor="">
-        <b>Username</b>
+        <b>Username</b> <br />
         <input
         className="username"
         placeholder="  Type your username" 
@@ -93,7 +93,7 @@ const Login = () => {
       </label><br/>
 
       <label htmlFor="">
-        <b>Password</b>
+        <b>Password</b> <br />
         <input
         className="password"
           type="password"
