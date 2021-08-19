@@ -19,11 +19,11 @@ function Workerdata({ worker }) {
         {/* desc */}
         <p className="WorkerDecs">{worker.decsription}</p>
         {/* order button */}
-        <button>Order</button>
       </div>
       <div className="calender">
       <Schedule />
       </div>
+        <button className="OrderButton" onClick={console.log(worker)}>Order</button>
     </div>
   );
 }
