@@ -1,7 +1,16 @@
-.workerdataa {
-  overflow:auto;
-  height:80vh;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.workerdataa {
+  height: 80vh;
+  overflow: auto;
+
+}
+
 .workerdata {
   background-color: #808ae4;
   margin: 0% 2% 0 2%;
@@ -20,6 +29,7 @@
   object-fit: contain;
   align-self: center;
 }
+
 .WorkerDecs {
   font-size: small;
   color: black;
@@ -27,6 +37,7 @@
   /* text-align: justify;   */
   /* padding: 2%; */
 }
+
 button {
   width: fit-content;
   align-self: center;
@@ -34,8 +45,7 @@ button {
   width: 100px;
   border: transparent;
 }
-
-.calender {
-margin: 5%;
-height:40%
+.calender{
+  display:flex;
+  ak
 }
