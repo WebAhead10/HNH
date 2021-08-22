@@ -1,4 +1,4 @@
-
+@import url("https://cdn.syncfusion.com/ej2/material.css");
 
 .workerdataa {
   height: 80vh;
@@ -58,4 +58,8 @@
 .timeOrder {
   display: flex;
   justify-content: space-evenly;
+}
+
+.timePicker {
+  width:20% ;
 }
