@@ -60,13 +60,8 @@
 .timeOrder {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 5vh;
 }
 
-h2, h4, Rating {
-  margin:0 !important;
-}
-
-.timePicker{
-  width :20%
+.timePicker {
+  width:20% ;
 }
