@@ -1,4 +1,4 @@
-
+@import url("https://cdn.syncfusion.com/ej2/material.css");
 
 .workerdataa {
   height: 80vh;
@@ -15,7 +15,7 @@
   border-radius: 8px;
   border: 1px solid black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
   align-content: center;
   flex-direction: column;
@@ -32,8 +32,7 @@
   font-size: small;
   color: black;
   font-size: medium;
-  /* text-align: justify;   */
-  /* padding: 2%; */
+ margin:0 !important;
 }
 .OrderButton {
   /* width: fit-content; */
@@ -41,8 +40,8 @@
   border-radius: 25px;
   width: 100px;
   border: none;
-  margin-bottom: 5vh;
-  
+  /* margin-bottom: 5vh; */
+  font-weight:bolder
 }
 
 .calender {
@@ -51,11 +50,23 @@
   justify-content: center;
 }
 
-#time {
-  scale: 1.04;
+#infoText{
+  justify-self: center;
+  margin-top: 4%;
+  color: #000;
+  
 }
 
 .timeOrder {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+h2, h4, Rating {
+  margin:0 !important;
+}
+
+.timePicker{
+  width :20%
 }

@@ -5,8 +5,11 @@
   justify-content: space-between;
   align-items: center;
 }
-p {
+
+.headerText {
   color: white;
+  margin-right: 20px;
+  position: relative;
 }
 .menu-bars {
   margin-left: 2rem;

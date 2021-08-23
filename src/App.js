@@ -6,6 +6,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login"
 import Signup from "./Components/Signup/Signup"
+import Order from "./Components/Order/Order"
 
 import Category from "./Components/Category/Category";
 import Workerdata from "./Components/WorkerData/Workerdata";
@@ -52,6 +53,9 @@ function App() {
             </Route>
             <Route exact path="/workerdata">
               <Workerdata worker={curWorker} />
+            </Route>
+            <Route exact path="/order">
+              <Order worker ={curWorker}/>
             </Route>
           </Switch>
         </div>

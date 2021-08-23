@@ -5,6 +5,9 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/pickers": "^3.3.10",
+    "@syncfusion/ej2-react-calendars": "^19.2.55",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -12,12 +15,13 @@
     "dotenv": "^8.2.0",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-pro-sidebar": "^0.6.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^1.1.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

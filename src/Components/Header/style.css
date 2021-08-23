@@ -8,12 +8,7 @@
   z-index: 1;
   justify-content: space-between;
 }
-p {
-  margin-right: 20px;
-  position: relative;
-  font-weight: bolder;
-  font-family: "Nunito Sans", sans-serif;
-}
+
 .menuBtn {
   background-color: transparent;
   border: none;
