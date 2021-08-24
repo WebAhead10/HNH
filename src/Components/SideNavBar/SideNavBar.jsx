@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SidebarData } from "./SidebarDara";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
@@ -10,6 +10,12 @@ function SideNavBar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+  const location = useLocation();
+  console.log(location);
+  const obj = {
+    "/": "Home",
+    "/category": "Categories",
+  };
 
   return (
     <div>
@@ -18,7 +24,7 @@ function SideNavBar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <p className="headerText">{window.location.href.split("http://localhost:3000/")}</p>
+          <p className="headerText">{obj[location.pathname]}</p>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

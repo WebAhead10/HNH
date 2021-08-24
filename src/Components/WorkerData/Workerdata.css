@@ -3,6 +3,7 @@
 .workerdataa {
   height: 80vh;
   overflow: auto;
+  margin-bottom: 20px;
   /* display: flex;
   flex-direction: column;
    justify-content: center;
@@ -32,7 +33,7 @@
   font-size: small;
   color: black;
   font-size: medium;
- margin:0 !important;
+  margin: 0 !important;
 }
 .OrderButton {
   /* width: fit-content; */
@@ -41,7 +42,7 @@
   width: 100px;
   border: none;
   /* margin-bottom: 5vh; */
-  font-weight:bolder
+  font-weight: bolder;
 }
 
 .calender {
@@ -50,11 +51,10 @@
   justify-content: center;
 }
 
-.infoText{
+.infoText {
   justify-self: center;
   margin-top: 4%;
   color: #000;
-  
 }
 
 .timeOrder {
@@ -63,10 +63,12 @@
   margin-bottom: 5vh;
 }
 
-h2, h4, Rating {
-  margin:0 !important;
+h2,
+h4,
+Rating {
+  margin: 0 !important;
 }
 
-.timePicker{
-  width :20%
+.timePicker {
+  width: 20%;
 }
