@@ -8,19 +8,28 @@ import { TimePickerComponent } from "@syncfusion/ej2-react-calendars";
 
 function Workerdata({ worker }) {
   const [jobDate, setJobDate] = useState(new Date());
+  const [jobTime, setJobTime] = useState("HH:MM");
   const history = useHistory();
   const timeValue = new Date();
-  timeValue.getMinutes()>30?timeValue.setMinutes("00"):timeValue.setMinutes("30");
-  timeValue.getMinutes()>30&&timeValue.setHours(timeValue.getHours()+1);
+  if(timeValue.getMinutes()>30)
+  {
+    timeValue.setMinutes("00");
+    timeValue.setHours(timeValue.getHours()+1);
+  }
+  else
+  {
+    timeValue.setMinutes("30");
+  }
+  
+// !/**************************** */
 
   const minTime = new Date();
   minTime.setMinutes(timeValue.getMinutes());
   minTime.setHours("07");
 
-
   const dateChanged = () =>
   {
-    if(timeValue.getDay === jobDate.getDay && timeValue.getMonth === jobDate.getMonth) 
+    if(timeValue.getDate() === jobDate.getDate() && timeValue.getMonth() === jobDate.getMonth()) 
     {
       minTime.setHours(timeValue.getHours() + 3);
     }
@@ -44,16 +53,18 @@ function Workerdata({ worker }) {
         <p className="WorkerDecs">{worker.decsription}</p>
         {/* order button */}
       </div>
-      <p id="infoText">please pick a Date & Time for your job </p>
+      <p className="infoText">please pick a date for your job</p>
       <div className="calender">
-        <Schedule jobDate={jobDate} setJobDate={setJobDate} dateChanged ={dateChanged}/>
+        <Schedule jobDate={jobDate} setJobDate={setJobDate} dateChanged ={dateChanged()} setJobTime={setJobTime}/>
       </div>
 
       <div className="timeOrder">
         <div className="timePicker">
+      <label className="infoText">Job time</label>
         <TimePickerComponent 
           // disabled= {jobDate?false:true}
-          value={timeValue}
+          value={jobTime==="HH:MM"?jobTime:"HH:MM"}
+          onChange={setJobTime}
           min={minTime}
           max={maxTime}
           format="HH:mm"
@@ -62,7 +73,7 @@ function Workerdata({ worker }) {
         <button className="OrderButton" onClick={() => {
           // TODO here will be the set state for :
           // ? worker , date , time ,...
-          if (worker) {
+          if (worker ) {
             history.push("/order");
           }
         }}>Order</button>
