@@ -1,8 +1,10 @@
 import React from "react";
 import "./Worker.css";
 import "../WorkerData/Workerdata";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 function Worker() {
+  const history = useHistory()
+
   return (
     <div className="worker">
       <div className="cir">
@@ -20,9 +22,7 @@ function Worker() {
         <div className="worker_desc">
           Mario is a senior fullstack web developer that have alot of experience
           with frontend & backend development.
-          <Link to="/workerdata">
-            <button className="InfoButton">Info</button>
-          </Link>
+            <button className="InfoButton" onClick={() => history.push('/workerdata')}>Info</button>
         </div>
       </div>
     </div>

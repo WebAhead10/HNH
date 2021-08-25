@@ -9,8 +9,8 @@ function Schedule({ jobDate, setJobDate, setJobTime }) {
         minDate={new Date()}
         style={{ margin: "10px", color: "black" }}
         onChange={(data) => {
+          setJobTime('')
           setJobDate(data);
-          setJobTime("HH:MM");
         }}
         value={jobDate}
       />

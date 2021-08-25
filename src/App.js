@@ -51,7 +51,7 @@ function App() {
             <Route exact path="/category">
               <Category />
             </Route>
-            <Route exact path="/workerdata">
+            <Route path="/workerdata">
               <Workerdata worker={curWorker} />
             </Route>
             <Route exact path="/order">

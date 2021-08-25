@@ -11,7 +11,7 @@ function SideNavBar() {
 
   const showSidebar = () => setSidebar(!sidebar);
   const location = useLocation();
-  console.log(location);
+  
   const obj = {
     "/": "Home",
     "/category": "Categories",
