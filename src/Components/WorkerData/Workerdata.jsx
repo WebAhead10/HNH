@@ -4,11 +4,12 @@ import Schedule from "../Schedule/Schedule";
 import Rating from "../Rating/Rating";
 import { useHistory, useParams } from "react-router-dom";
 
-function Workerdata({ worker }) {
+import axios from "axios";
+function Workerdata() {
   const [jobDate, setJobDate] = useState(new Date());
+  const [worker, setWorker] = useState({});
   const history = useHistory();
   const params = useParams();
-  console.log(params);
   const timeValue = new Date();
   const AvHours = [
     "07:00",
@@ -44,6 +45,19 @@ function Workerdata({ worker }) {
     "22:00",
   ];
   const [jobTime, setJobTime] = useState(AvHours[0]);
+  const fetchWorker = (id) => {
+    axios
+      .get(process.env.REACT_APP_API_URL + "/worker/" + id)
+      .then((res) => {
+        setWorker(res.data.worker);
+      })
+      .catch((error) => console.log(error));
+  };
+  React.useEffect(() => {
+    if (params.id) {
+      fetchWorker(params.id);
+    }
+  }, []);
 
   if (timeValue.getMinutes() > 30) {
     timeValue.setMinutes("00");
@@ -67,7 +81,7 @@ function Workerdata({ worker }) {
         {/* ocupation */}
         <h4>{worker.jobtitle}</h4>
         {/* stars */}
-        <Rating fullStars={worker.ratenumber} />
+        <Rating fullStars={worker.ratenumber || 0} />
         {/* desc */}
         <p className="WorkerDecs">{worker.info}</p>
         {/* order button */}

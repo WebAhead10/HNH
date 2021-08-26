@@ -41,7 +41,7 @@ function CategoryList() {
           <button
             className="InfoButton"
             onClick={() => {
-              history.push("/workerdata");
+              history.push("/workerdata/" + worker.id);
             }}
           >
             Info

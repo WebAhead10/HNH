@@ -3,9 +3,8 @@ import "./Worker.css";
 import Rating from "../Rating/Rating";
 import "../WorkerData/Workerdata";
 import { useHistory } from "react-router-dom";
-function Worker({ worker, setCurWorker }) {
+function Worker({ worker }) {
   const history = useHistory();
-
   return (
     <div className="worker">
       <div className="cir">
@@ -22,7 +21,6 @@ function Worker({ worker, setCurWorker }) {
           <button
             className="InfoButton"
             onClick={() => {
-              // setCurWorker(worker);
               history.push("/workerdata/" + worker.id);
             }}
           >
