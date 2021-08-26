@@ -1,13 +1,19 @@
 import React from "react";
 import "./Service.css";
-function Service() {
+import { useHistory } from "react-router-dom";
+function Service({ name, image, url}) {
+  const history = useHistory();
   return (
     <div className="service_container">
       <img
-        src="https://i.imagesup.co/images2/d61de93a7067824928643f94ccadbae290bfce63.png"
+      className='hara'
+        src={image}
         alt=""
+        onClick={() => {
+          history.push(url);
+        }}
       />
-      <div className="service_name">Electricity</div>
+      <div className="service_name">{name}</div>
     </div>
   );
 }

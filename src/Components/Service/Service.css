@@ -7,3 +7,7 @@
 .service_name {
   margin-top: 10px;
 }
+.hara {
+  height: 100px;
+  object-fit: cover;
+}

@@ -1,13 +1,32 @@
 import React from "react";
-import "./Worker.css";
+import "./style.css";
 import Rating from "../Rating/Rating";
 import "../WorkerData/Workerdata";
-import { useHistory } from "react-router-dom";
-function Worker({ worker, setCurWorker }) {
-  const history = useHistory();
+import { useHistory, useParams } from "react-router-dom";
+import axios from "axios";
 
-  return (
-    <div className="worker">
+function CategoryList() {
+  const history = useHistory();
+  const params = useParams();
+  const [workers, setWorkers] = React.useState([]);
+
+  const fetchCategory = (category) => {
+    axios
+      .get(process.env.REACT_APP_API_URL + "/job-title/" + category)
+      .then((res) => {
+        setWorkers(res.data.workers);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  React.useEffect(() => {
+    if (params.category) {
+      fetchCategory(params.category);
+    }
+  }, []);
+
+  return workers.map((worker) => (
+    <div key={worker.id} className="worker">
       <div className="cir">
         <img src={worker.img} alt="" />
       </div>
@@ -22,8 +41,7 @@ function Worker({ worker, setCurWorker }) {
           <button
             className="InfoButton"
             onClick={() => {
-              // setCurWorker(worker);
-              history.push("/workerdata/" + worker.id);
+              history.push("/workerdata");
             }}
           >
             Info
@@ -31,7 +49,7 @@ function Worker({ worker, setCurWorker }) {
         </div>
       </div>
     </div>
-  );
+  ));
 }
 
-export default Worker;
+export default CategoryList;

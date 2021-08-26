@@ -3,7 +3,7 @@ import "./style.css";
 import Search from "../Search/Search";
 import Worker from "../Worker/Worker";
 import axios from "axios";
-function Home({setCurWorker}) {
+function Home({ setCurWorker }) {
   const [workersList, setWorkerList] = useState([]);
 
   useEffect(() => {
@@ -18,9 +18,6 @@ function Home({setCurWorker}) {
       {workersList.map((worker) => (
         <Worker setCurWorker={setCurWorker} key={worker.id} worker={worker} />
       ))}
-
-      {/* <Worker />
-      <Worker /> */}
     </div>
   );
 }

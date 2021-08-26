@@ -1,7 +1,6 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 
 .workerdataa {
-  height: 80vh;
   overflow: auto;
   margin-bottom: 20px;
   /* display: flex;

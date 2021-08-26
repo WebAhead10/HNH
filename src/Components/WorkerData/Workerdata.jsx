@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./Workerdata.css";
 import Schedule from "../Schedule/Schedule";
 import Rating from "../Rating/Rating";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 function Workerdata({ worker }) {
   const [jobDate, setJobDate] = useState(new Date());
   const history = useHistory();
+  const params = useParams();
+  console.log(params);
   const timeValue = new Date();
   const AvHours = [
     "07:00",

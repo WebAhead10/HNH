@@ -4,14 +4,15 @@ import "./style.css";
 function Rating({ fullStars }) {
   return (
     <div className="Stars">
-      {Array(fullStars)
+      {Array(+fullStars)
         .fill()
         .map((_, stars) => (
           <p className="fullStar" key={stars}>
             ★
           </p>
         ))}
-      {Array(5 - fullStars)
+
+      {Array(Math.abs(+fullStars - 5))
         .fill()
         .map((_, stars) => (
           <p className="emptyStar" key={stars}>

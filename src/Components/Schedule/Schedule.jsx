@@ -1,5 +1,4 @@
-import { Today } from "@material-ui/icons";
-import React, { useState } from "react";
+import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 function Schedule({ jobDate, setJobDate, setJobTime }) {
@@ -9,7 +8,7 @@ function Schedule({ jobDate, setJobDate, setJobTime }) {
         minDate={new Date()}
         style={{ margin: "10px", color: "black" }}
         onChange={(data) => {
-          setJobTime('')
+          setJobTime("");
           setJobDate(data);
         }}
         value={jobDate}
