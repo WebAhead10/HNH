@@ -40,7 +40,7 @@ function App() {
               <Route path="/workerdata/:id">
                 <Workerdata />
               </Route>
-              <Route exact path="/order">
+              <Route exact path="/order/:id">
                 <Order />
               </Route>
               <Route path="/:category">

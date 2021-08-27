@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import Search from "../Search/Search";
 import Worker from "../Worker/Worker";
 import axios from "axios";
 function Home({ setCurWorker }) {
@@ -14,7 +13,6 @@ function Home({ setCurWorker }) {
 
   return (
     <div className="home">
-      <Search />
       {workersList.map((worker) => (
         <Worker setCurWorker={setCurWorker} key={worker.id} worker={worker} />
       ))}

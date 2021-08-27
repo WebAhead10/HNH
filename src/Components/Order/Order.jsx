@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Rating from "../Rating/Rating";
 import Card from "../Card/Card";
-
 import "./style.css";
-function Order({ worker }) {
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
+function Order() {
+  const params = useParams();
+  const [worker, setWorker] = useState({});
+  const fetchWorker = (id) => {
+    axios
+      .get(process.env.REACT_APP_API_URL + "/order/" + id)
+      .then((res) => {
+        setWorker(res.data.worker);
+      })
+      .catch((error) => console.log(error));
+  };
+  React.useEffect(() => {
+    if (params.id) {
+      fetchWorker(params.id);
+    }
+  }, []);
   return (
     <div className="mainOrder">
       <p className="Ordertext">Your order details:</p>
@@ -15,7 +32,7 @@ function Order({ worker }) {
           <div className="worker_namePay">
             <span className="namePay">{worker.fullname}</span>
             <div className="starss">
-              <Rating fullStars={worker.ratenumber} />
+              <Rating fullStars={worker.ratenumber || 0} />
             </div>
           </div>
           <span className="worker_jobPay">{worker.jobtitle}</span>
@@ -24,8 +41,8 @@ function Order({ worker }) {
       {/* // TODO add a user/ customer info .... */}
       <div className="user_Info">
         <div className="userInfo_row">
-          <span className="userName">Hassan hassuna</span>
-          <span className="grey userPhone">0526428495</span>
+          <span className="userName">{worker.fullname}</span>
+          <span className="grey userPhone">{worker.phonenum}</span>
         </div>
         <div className="userInfo_row">
           <span className="grey userAddress">12 yaffa st. YAFFA</span>

@@ -8,6 +8,7 @@ import axios from "axios";
 function Workerdata() {
   const [jobDate, setJobDate] = useState(new Date());
   const [worker, setWorker] = useState({});
+  const [time, setTime] = useState([]);
   const history = useHistory();
   const params = useParams();
   const timeValue = new Date();
@@ -115,9 +116,11 @@ function Workerdata() {
           className="OrderButton"
           onClick={() => {
             // TODO here will be the set state for :
-            // ? worker , date , time ,...
+            console.log(jobDate);
+            console.log(jobTime);
+            //axios.post(jobtime,jobdata) -> fetch back in the payment
             if (jobTime && jobDate) {
-              history.push("/order");
+              history.push("/order/" + worker.id);
             }
           }}
         >

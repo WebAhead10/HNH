@@ -2,6 +2,7 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
 
 export const SidebarData = [
   {
@@ -23,9 +24,15 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "My account",
-    path: "/myaccount",
+    title: "Sign Up",
+    path: "/signup",
+    icon: <LockOpenIcon />,
+    cName: "nav-text",
+  },
+  {
+    title: "Login",
+    path: "/login",
     icon: <IoIcons.IoMdPeople />,
     cName: "nav-text",
-  }
+  },
 ];
