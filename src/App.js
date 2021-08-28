@@ -13,7 +13,9 @@ import TopRated from "./Components/TopRated/TopRated";
 function App() {
   // Declare a new state variable, which we'll call "count"
   const [sideNavBarOpen, setSideNavBarOpen] = useState(false);
-  // const [curWorker, setCurWorker] = useState({});
+  const [selectedJobDate, setSelectedJobDate] = useState({});
+  const [selectedJobTime, setSelectedJobTime] = useState({});
+  const [curWorker, setCurWorker] = useState({});
 
   return (
     <Router>
@@ -42,10 +44,18 @@ function App() {
                 <TopRated />
               </Route>
               <Route path="/workerdata/:id">
-                <Workerdata />
+                <Workerdata
+                  setCurWorker={setCurWorker}
+                  setSelectedJobDate={setSelectedJobDate}
+                  setSelectedJobTime={setSelectedJobTime}
+                />
               </Route>
               <Route exact path="/order/:id">
-                <Order />
+                <Order
+                  curWorker={curWorker}
+                  selectedJobDate={selectedJobDate}
+                  selectedJobTime={selectedJobTime}
+                />
               </Route>
               <Route path="/:category">
                 <CategoryList />

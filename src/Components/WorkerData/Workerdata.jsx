@@ -5,7 +5,7 @@ import Rating from "../Rating/Rating";
 import { useHistory, useParams } from "react-router-dom";
 
 import axios from "axios";
-function Workerdata() {
+function Workerdata(props) {
   const [jobDate, setJobDate] = useState(new Date());
   const [worker, setWorker] = useState({});
   const [time, setTime] = useState([]);
@@ -120,6 +120,8 @@ function Workerdata() {
             console.log(jobTime);
             //axios.post(jobtime,jobdata) -> fetch back in the payment
             if (jobTime && jobDate) {
+              props.setSelectedJobTime(jobTime);
+              props.setSelectedJobDate(jobDate);
               history.push("/order/" + worker.id);
             }
           }}

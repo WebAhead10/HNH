@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Rating from "../Rating/Rating";
 import Card from "../Card/Card";
 import "./style.css";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 
-function Order() {
-  const params = useParams();
-  const [worker, setWorker] = useState({});
+function Order({ selectedJobDate, selectedJobTime }) {
   const [form, setForm] = React.useState({
     cvc: "",
     expiry: "",
@@ -15,6 +13,42 @@ function Order() {
     name: "",
     number: "",
   });
+  const params = useParams();
+  const history = useHistory();
+  const [error, setError] = useState(false);
+  const [worker, setWorker] = useState({});
+  const [appointmentData, setappointmentData] = useState({});
+  const onSubmit = () => {
+    console.log("reached paiments and appointments!!!!!");
+    console.log(selectedJobDate);
+    console.log(selectedJobTime);
+    console.log(form);
+    console.log(appointmentData);
+    axios
+      .post(process.env.REACT_APP_API_URL + "/order/" + worker.id, {
+        workerId: worker.id,
+        jobYear: selectedJobDate.getYear(),
+        jobMonth: selectedJobDate.getMonth(),
+        jobDay: selectedJobDate.getDate(),
+        jobHours: parseInt(selectedJobTime.toString().split(":")[0]),
+        jobMinutes: parseInt(selectedJobTime.toString().split(":")[1]),
+        visaNumber: form.number,
+        visaHolder: form.name,
+        visaXdate: form.expiry,
+        visaCvc: form.cvc,
+      })
+      .then((res) => {
+        if (!res.data.success) {
+          setError(res.data.message);
+        } else {
+          history.push("/");
+        }
+      })
+      .catch((err) => {
+        setError(err.response.data.message);
+      });
+  };
+
   console.log(form);
   const fetchWorker = (id) => {
     axios
@@ -62,7 +96,9 @@ function Order() {
         {/* // ! dept CARD */}
         <Card form={form} setForm={setForm} />
       </div>
-      <button className="payButton">Pay</button>
+      <button className="payButton" onClick={onSubmit}>
+        Pay
+      </button>
     </div>
   );
 }
