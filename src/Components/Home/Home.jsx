@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import Worker from "../Worker/Worker";
 import axios from "axios";
-function Home({ setCurWorker }) {
+function Home() {
   const [workersList, setWorkerList] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Home({ setCurWorker }) {
   return (
     <div className="home">
       {workersList.map((worker) => (
-        <Worker setCurWorker={setCurWorker} key={worker.id} worker={worker} />
+        <Worker key={worker.id} worker={worker} />
       ))}
     </div>
   );

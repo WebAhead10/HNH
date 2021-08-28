@@ -7,6 +7,7 @@ import axios from "axios";
 
 function Order() {
   const params = useParams();
+  console.log(params);
   const [worker, setWorker] = useState({});
   const fetchWorker = (id) => {
     axios
@@ -20,7 +21,7 @@ function Order() {
     if (params.id) {
       fetchWorker(params.id);
     }
-  }, []);
+  },[]);
   return (
     <div className="mainOrder">
       <p className="Ordertext">Your order details:</p>

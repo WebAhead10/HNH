@@ -9,6 +9,7 @@ import Order from "./Components/Order/Order";
 import CategoryList from "./Components/CategoryList";
 import Category from "./Components/Category/Category";
 import Workerdata from "./Components/WorkerData/Workerdata";
+import TopRated from "./Components/TopRated/TopRated";
 function App() {
   // Declare a new state variable, which we'll call "count"
   const [sideNavBarOpen, setSideNavBarOpen] = useState(false);
@@ -36,6 +37,9 @@ function App() {
               </Route>
               <Route exact path="/category">
                 <Category />
+              </Route>
+              <Route path="/toprated">
+                <TopRated />
               </Route>
               <Route path="/workerdata/:id">
                 <Workerdata />
