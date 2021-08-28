@@ -7,8 +7,15 @@ import axios from "axios";
 
 function Order() {
   const params = useParams();
-  console.log(params);
   const [worker, setWorker] = useState({});
+  const [form, setForm] = React.useState({
+    cvc: "",
+    expiry: "",
+    focus: "",
+    name: "",
+    number: "",
+  });
+  console.log(form);
   const fetchWorker = (id) => {
     axios
       .get(process.env.REACT_APP_API_URL + "/order/" + id)
@@ -21,7 +28,7 @@ function Order() {
     if (params.id) {
       fetchWorker(params.id);
     }
-  },[]);
+  }, []);
   return (
     <div className="mainOrder">
       <p className="Ordertext">Your order details:</p>
@@ -53,7 +60,7 @@ function Order() {
       {/* // ? make sure to take the user its authenticated */}
       <div className="paymentDiv">
         {/* // ! dept CARD */}
-        <Card />
+        <Card form={form} setForm={setForm} />
       </div>
       <button className="payButton">Pay</button>
     </div>
