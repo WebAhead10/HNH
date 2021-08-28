@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <div className="home">
-      {workersList.map((worker) => (
+      {workersList.slice(0, 3).map((worker) => (
         <Worker key={worker.id} worker={worker} />
       ))}
     </div>
