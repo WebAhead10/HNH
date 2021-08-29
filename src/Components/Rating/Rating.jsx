@@ -1,6 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./style.css";
-
 function Rating({ fullStars }) {
   return (
     <div className="Stars">

@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Worker.css";
 import Rating from "../Rating/Rating";
 import "../WorkerData/Workerdata";
 import { useHistory } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Worker({ worker }) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const history = useHistory();
   return (
-    <div className="worker">
+    <div data-aos="zoom-in" className="worker">
       <div className="cir">
         <img src={worker.img} alt="" />
       </div>

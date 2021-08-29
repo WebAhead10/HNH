@@ -19,11 +19,6 @@ function Order({ selectedJobDate, selectedJobTime }) {
   const [worker, setWorker] = useState({});
   const [appointmentData, setappointmentData] = useState({});
   const onSubmit = () => {
-    console.log("reached paiments and appointments!!!!!");
-    console.log(selectedJobDate);
-    console.log(selectedJobTime);
-    console.log(form);
-    console.log(appointmentData);
     axios
       .post(process.env.REACT_APP_API_URL + "/order/" + worker.id, {
         workerId: worker.id,
@@ -41,6 +36,7 @@ function Order({ selectedJobDate, selectedJobTime }) {
         if (!res.data.success) {
           setError(res.data.message);
         } else {
+          alert("Payment successfull!");
           history.push("/");
         }
       })
